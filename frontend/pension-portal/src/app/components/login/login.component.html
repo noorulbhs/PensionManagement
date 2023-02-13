@@ -1,0 +1,44 @@
+<div class="bootstrap-wrapper backgroundImage">
+    <div class="container mt">
+        
+        <div class="row">
+            <div class="col-md-6 offset-md-3" >
+                <mat-card class = "bg-light text-center text-dark mt20">
+               
+                <mat-card-title style = "margin-bottom: 20px" class = "header">LOGIN</mat-card-title>
+                <form (ngSubmit)="onSubmit()"> 
+                    <mat-form-field class="full-width">
+                        <mat-label>Enter Username</mat-label>
+                        <input type="text" name="username" matInput required [(ngModel)]="credentials.username">
+                    </mat-form-field>
+                    <mat-form-field class="full-width">
+                        <mat-label>Enter Password</mat-label>
+                        <input name="password" type="password" matInput required [(ngModel)]="credentials.password">
+                    </mat-form-field>
+                    <div class="container text-center">
+                        <button mat-raised-button color="primary" type="submit" [disabled]="isDisabled">Login</button>
+                    </div>
+                </form>
+                </mat-card>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<div [ngClass]={show:loading}  class="loader-main">
+    <div class="loader"></div>
+    </div>
+
+
+<div class="modal_check">
+    <div [ngClass]={show:isError} class="modal-container" id="modal_container">
+        
+      <div class="modal-box">
+          <h1>Error Occured</h1>
+        <p>{{errorMessage}}</p>
+        <button class="btn btn-primary" id="close" (click)="closeError()">Ok</button>
+      </div>
+  </div>
+  </div>

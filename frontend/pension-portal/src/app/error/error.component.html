@@ -1,0 +1,10 @@
+<div class="modal_check">
+  <div [ngClass]={show:isError} class="modal-container" id="modal_container">
+      
+    <div class="modal-box">
+        <h1>Error Occured</h1>
+      <p>{{errorMessage}}</p>
+      <button class="btn btn-primary" id="close" (click)="closeError()">Ok</button>
+    </div>
+</div>
+</div>

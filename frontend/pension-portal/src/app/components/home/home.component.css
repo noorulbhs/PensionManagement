@@ -1,0 +1,16 @@
+.backgroundImage{
+    margin-top: 0px;
+    background-image: url("../../../assets/images/849047-retirement-istock-050819.jpg");
+    background-size: 100% ;  
+    background-size: cover;
+    height: 545px;
+}
+
+.marginTop{
+    margin-top: 0px;
+}
+
+.mr{
+    margin-right:10px;
+}
+

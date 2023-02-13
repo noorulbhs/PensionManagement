@@ -1,0 +1,167 @@
+<div class="bootstrap-wrapper">
+    <div class="conatiner text-right mt">
+        <h3 class="mr">Welcome Admin</h3>
+    </div>
+    
+<div class="modal_check">
+  <br/>
+  <input class="inputProcessPension" placeHolder="Enter Your AdhaarNumber" name="adhaarNumber" type="text" matInput required [(ngModel)]="adhaarNumber">   
+  <button color="primary" mat-raised-button (click)="getDetail()" >Get Detail</button>
+<div [ngClass]={show:isModalShow} class="modal-container" id="modal_container">
+  <div class="modal-box">
+    <h1>Your Pension Detail</h1>
+    <table class="mat-table table">
+      <tr>
+        <th>Bank Service Charge</th>
+        <td>{{processPensionDetail.bankServiceCharge}}</td>
+      </tr>
+      <tr>
+        <th>Pension Amount</th>
+        <td>{{processPensionDetail.pensionAmount}}</td>
+      </tr>
+    </table>
+    <button (click)="saveDetail()">Save</button>
+    <button (click)="showDetail()">Show Pensioner Detail</button>
+    <button id="close" (click)="closeModal()">Close</button>
+  </div>
+</div>
+</div>
+
+
+
+<div class="modal_check">
+
+  <br/>
+<div [ngClass]={show:isSaveModal} class="modal-container" id="modal_container">
+  <div class="modal-box">
+    <h1>{{saveMessage}}</h1>
+    <button id="close" (click)="closeSaveModal()">Close</button>
+  </div>
+</div>
+</div>
+
+
+<div [ngClass]={show:isShowDetail} class="h-100 row align-items-center vertical-center-row modal-container detailMargin" id="modal_container">
+  <div class="modal-box">
+    <button id="close" (click)="closeDetail()">Close</button>
+  <table *ngIf="isDataPresent"  class="mat-table table ">
+    <tbody>
+      <tr>
+        <th class="mat-header-cell" scope="col">AdhaarNumber</th>
+        <td class="mat-cell" *ngFor="let element of dataSource">
+          {{element.adhaarNumber}}
+        </td>
+      </tr>
+    </tbody>
+    <tbody>
+      <tr>
+    <th class="mat-header-cell">Name</th>
+        <td class="mat-cell" *ngFor="let element of dataSource">
+          {{element.name}}
+        </td>
+      </tr>
+    </tbody>
+    <tbody>
+      <tr>
+        <th class="mat-header-cell">Date Of Birth</th>
+        <td class="mat-cell" *ngFor="let element of dataSource">
+          {{element.dateOfBirth}}
+        </td>
+      </tr>
+    </tbody>
+    <tbody>
+      <tr>
+        <th class="mat-header-cell">Pan Number</th>
+        <td class="mat-cell" *ngFor="let element of dataSource">
+          {{element.panNumber}}
+        </td>
+      </tr>
+    </tbody>
+    <tbody>
+      <tr>
+        <th class="mat-header-cell">Salary</th>
+        <td class="mat-cell" *ngFor="let element of dataSource">
+          {{element.salaryEarned}}
+        </td>
+      </tr>
+    </tbody>
+    <tbody>
+      <tr>
+        <th class="mat-header-cell">Allowances</th>
+        <td class="mat-cell" *ngFor="let element of dataSource">
+          {{element.allowances}}
+        </td>
+      </tr>
+    </tbody>
+    <tbody>
+      <tr>
+        <th class="mat-header-cell">Self/Family Pension</th>
+        <td class="mat-cell" *ngFor="let element of dataSource">
+          {{element.selfOrFamilyPension}}
+        </td>
+      </tr>
+    </tbody>
+    <tbody>
+      <tr>
+        <th class="mat-header-cell">Bank Name</th>
+        <td class="mat-cell" *ngFor="let element of dataSource">
+          {{element.bankName}}
+        </td>
+      </tr>
+    </tbody>
+    <tbody>
+      <tr>
+        <th class="mat-header-cell">Account Number</th>
+        <td class="mat-cell" *ngFor="let element of dataSource">
+          {{element.accountNumber}}
+        </td>
+      </tr>
+    </tbody>
+    <tbody>
+      <tr>
+        <th class="mat-header-cell">BankType</th>
+        <td class="mat-cell" *ngFor="let element of dataSource">
+          {{element.bankType}}
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+ </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div [ngClass]={show:loading}  class="loader-main">
+  <div class="loader"></div>
+  </div>
+
+<div class="modal_check">
+  <div [ngClass]={show:isError} class="modal-container" id="modal_container">
+      
+    <div class="modal-box">
+        <h1>Error Occured</h1>
+      <p>{{errorMessage}}</p>
+      <button class="btn btn-primary" id="close" (click)="closeError()">Ok</button>
+    </div>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+

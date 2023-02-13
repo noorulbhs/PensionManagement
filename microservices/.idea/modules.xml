@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/gate-way/gate-way/gate-way.iml" filepath="$PROJECT_DIR$/gate-way/gate-way/gate-way.iml" />
+      <module fileurl="file://$PROJECT_DIR$/login-service/login-service/login-service.iml" filepath="$PROJECT_DIR$/login-service/login-service/login-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/microservices.iml" filepath="$PROJECT_DIR$/.idea/microservices.iml" />
+      <module fileurl="file://$PROJECT_DIR$/process-pension/process-pension/process-pension.iml" filepath="$PROJECT_DIR$/process-pension/process-pension/process-pension.iml" />
+    </modules>
+  </component>
+</project>

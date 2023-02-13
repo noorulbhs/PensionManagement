@@ -1,0 +1,127 @@
+.backgroundImage{
+  margin-top: 0px;
+  background-image: url("../../../assets/images/849047-retirement-istock-050819.jpg");
+  background-size: 100% ;  
+  background-size: cover;
+  height: 545px;
+}
+
+
+.full-width{
+    width: 100%;
+}
+
+
+
+.modal_check{
+    box-sizing: border-box;
+    align-items: center;
+    justify-content: center;
+  margin-top: 10%;
+  margin-left: 32%;
+  }
+  
+  .modal_check input{
+    width: 200px;
+    margin-right: 10px;
+  }
+  
+.mt{
+  margin-top: 0px;
+}  
+  
+.mt20{
+  margin-top: 20%;
+}
+  
+  .modal-container{
+    background-color: rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    opacity: 0;
+    pointer-events: none;
+    top: 0;
+    left: 0;
+    height:100vh;
+    width:100%;
+  }
+  
+  .modal-container.show{
+    opacity: 1;
+    pointer-events: auto;
+  }
+  
+  .modal-box{
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 30px 50px;
+    width: 600px;
+    max-width: 100%;
+    text-align: center;
+  }
+  
+  .modal-box h1{
+    margin: 0;
+  }
+  
+  .modal-box p{
+    font-size: 14px;
+    opacity: 0.7;
+  }
+  
+  .modal-box table{
+    margin-left: 25%;
+    margin-top: 5%;
+  }
+
+  .bg-light{
+
+    background-color:#008cff;
+
+    color: rgb(3, 3, 3);
+
+}
+
+
+
+
+  .loader-main{
+    background-color: rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    opacity: 0;
+    pointer-events: none;
+    top: 0;
+    left: 0;
+    height:100vh;
+    width:100%;
+  }
+  
+  .loader-main.show{
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .loader {
+    border: 8px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 8px solid #3498db;
+    width: 50px;
+    height: 50px;
+    -webkit-animation: spin 2s linear infinite;
+    animation: spin 2s linear infinite;
+  }
+  
+  @-webkit-keyframes spin {
+    0% { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); }
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
